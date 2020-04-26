@@ -182,12 +182,12 @@ def create_bubble(express_bubble_data, top_region_list):
 
     # bubble_graph = bc.create_bubble(top_region_list, num_of_days, agg_region_confirmed_data, agg_region_death_data)
 
-    print(express_bubble_data.head())
-    df1 = express_bubble_data[express_bubble_data['region'].isin(top_region_list.head(2))]
-    print(df1.head())
-    print(top_region_list.head(2))
+    # print(express_bubble_data.head())
+    # df1 = express_bubble_data[express_bubble_data['region'].isin(top_region_list.head(2))]
+    # print(df1.head())
+    # print(top_region_list.head(2))
 
-    bubble_graph = bc.create_bubble(df1)
+    bubble_graph = bc.create_bubble(express_bubble_data)
     bubble_curves = dcc.Graph(figure=bubble_graph)
     bubble_curves = [bubble_curves]
 

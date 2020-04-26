@@ -26,10 +26,8 @@ def create_growth(df1):
 def create_percent_growth(df1):
     if len(df1.shape) == 2:
         return (np.asarray(df1[0][1:]) - np.asarray(df1[0][:-1])) / np.asarray(df1[0][:-1]) * 100
-        # return (np.asarray(df1[0][1:]) - np.asarray(df1[0][:-1])) / 1 * 100
     else:
         return (np.asarray(df1[1:]) - np.asarray(df1[:-1])) / np.asarray(df1[:-1]) * 100
-        # return (np.asarray(df1[1:]) - np.asarray(df1[:-1])) / 1 * 100
 
 def top_metric4(df1):
     return df1[-1]
